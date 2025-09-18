@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  overflow: hidden;
+  background-image: url(../src/assets/todo-background.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER COMPONENT */
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  margin: 0 auto;
+  color: #00bcbe;
+}
+
+.header a {
+  color: #00bcbe;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.socialContainer,
+.socialItem {
+  display: flex;
+}
+
+.socialContainer {
+  gap: 1rem;
+}
+
+.socialItem {
+  gap: 6px;
+  transition: background 0.3s ease;
+}
+
+.socialItem:hover,
+.socialItem:hover a {
+  color: #8a84ef;
+}
+
+/* CONTAINER PRINCIPAL */
+.app {
+  width: 800px;
+  height: fit-content;
+  padding: 3rem;
+  background: #ef7722;
+  border-radius: 16px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-100px);
+}
+
+.app h1 {
+  margin-bottom: 3rem;
+  color: white;
+  text-align: center;
+}
+
+/* ESTILO DO FORMULÁRIO */
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 3rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px 20px;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  border: none;
+  border-radius: 8px;
+}
+
+input::placeholder {
+  color: #717171;
+}
+
+button {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+button:hover {
+  filter: contrast(130%);
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+/* LISTA DE TAREFAS */
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.todo-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 12px 20px;
+  color: #023047;
+  letter-spacing: 0.3px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.todo-item > :nth-child(2) {
+  flex: 1;
+}
+
+.edit-item {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 8px;
+  background-color: #00bcbe;
+  border-radius: 16px;
+}
+
+.edit-item input {
+  width: 100%;
+  padding: 0 20px;
+  color: #00bcbe;
+  color: #717171;
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .app {
+    width: 100%;
+    margin: 0 1rem;
+    padding: 2rem 1rem;
+    transform: translateY(0);
+  }
+
+  .icon {
+    font-size: 1rem;
+  }
+
+  .text {
+    display: none;
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "printWidth": 800,
+  "singleAttributePerLine": false,
+  "plugins": ["prettier-plugin-style-order"]
+}
